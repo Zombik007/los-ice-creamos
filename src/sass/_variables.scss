@@ -1,0 +1,105 @@
+$width-mobile: 480px;
+$width-tablet: 768px;
+$width-desktop: 1280px;
+
+$width-to-tablet: 767px;
+$width-to-desktop: 1279px;
+
+$function-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$function-time: 250ms;
+
+$font-family-basic: DM Sans, sans-serif;
+$font-family-title: Titan One, cursive;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+// $font-weight-black: 900;
+
+$text-size-basic: 12px;
+$text-size-secondary: 14px;
+$text-size-tertiary: 16px;
+
+$label-size-basic: 18px;
+$label-size-secondary: 26px;
+$label-size-tertiary: 30px;
+
+$title-size-basic: 34px;
+$title-size-secondary: 48px;
+$title-size-tertiary: 58px;
+
+// $font-height-basic:
+// $font-height-secondary:
+// $font-height-tertiary:
+
+$font-spacing-basic: 00.04em;
+$font-spacing-secondary: 00.06em;
+
+$color-title-basic: #d41443;
+$color-title-secondary: #ffa5ba;
+$color-title-tertiary: #000000;
+
+$color-text-basic: #907e82;
+$color-text-secondary: #000000;
+$color-text-tertiary: #ffa5ba;
+
+$color-bg-primary: #fff5f6;
+$color-bg-secondary: #ffffff;
+
+$color-border: #e1e1e1;
+
+$color-button-text: #d41443;
+$color-button-bg-light: #ffffff;
+$color-button-bg-medium: #ecebeb;
+
+$color-button-bg-dark: #d41342;
+
+$color-bg-icon: #fea5bb;
+
+//products variables
+$ice-cream-card: #ffb8ca;
+$ice-coffee-card: #f0d1a5;
+$milkshakes-card: #c2e297;
+
+$font-size-products-card-tittle: 20px;
+$font-size-products-card-tittle-desktop: 30px;
+
+$products-card-text-white: #ffffff;
+$card-dots-white: #ffffff;
+$card-button-primary: #ffa5ba;
+
+$card-button-light: #ffffff;
+$card-button-accent: #c7133e;
+
+//slider
+$slider-text-color: #fafafa;
+$slider-dots-color: #d9d9d9;
+$slider-active-dots-color: #d31342;
+
+$card-button-light: #ffffff;
+$card-button-accent: #c7133e;
+
+// menu
+$bg-color-backdrop-menu: rgba(0, 0, 0, 0.2);
+$bg-color-menu-container: #e17992;
+$border-color-site-nav: #e18298;
+$color-hover-link: #d41443;
+
+$shadow-buy-button: rgba(212, 20, 67, 0.1);
+
+// hero_variables
+
+$hero-bg-color: #ffb8ca;
+$hero-sec-bg-color: #ffa5ba;
+$hero-trip-bg-color: #ffffff;
+$hero-button-bg-color: #d41443;
+
+$hero-button-text-size: 8px;
+
+$hero-main-text-color: #ffffff;
+
+$hero-title-size-tab: 22px;
+$hero-title-size-dsktp: 38px;
+
+$hero-info-font-size: 28px;
+$hero-sec-info-font-size: 46px;

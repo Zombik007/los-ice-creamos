@@ -1,0 +1,238 @@
+.customer-reviews {
+  text-align: center;
+  padding: 80px 20px 85px 20px;
+  display: block;
+}
+.slick-prev {
+  display: none;
+}
+.slick-next {
+  display: none;
+}
+.personal-data {
+  font-family: $font-family-basic;
+  font-weight: $font-weight-medium;
+  font-style: normal;
+  font-size: $text-size-secondary;
+  line-height: 1.86;
+  color: $color-text-secondary;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.customer-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 29px;
+  display: block;
+  width: 85px;
+}
+.customer-item-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.customer-dots {
+  width: 4px;
+  height: 4px;
+  background-color: $color-title-basic;
+  border-radius: 50%;
+}
+.customer-dots:not(:last-child) {
+  margin-right: 10px;
+}
+body {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.slider-text-wrapper {
+  background-color: $slider-text-color;
+  padding: 44px 50px 16px;
+  margin-bottom: 31px;
+}
+.slider-text {
+  font-family: $font-family-basic;
+  font-weight: $font-weight-medium;
+  font-size: $text-size-basic;
+  color: $color-text-secondary;
+  line-height: 2.55;
+  padding: 0 18px;
+  background-image: repeating-linear-gradient(
+    to top,
+    $color-border 0px 1px,
+    transparent 1px 31px
+  );
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.slider-text::before {
+  background-image: url('../icons/icon-quotes.svg');
+  width: 54px;
+  height: 40px;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: -7%;
+  z-index: -1;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 13px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $slider-dots-color;
+  border: none;
+  outline: none;
+  display: block;
+}
+@media screen and (min-width: $width-mobile) {
+  .customer-reviews {
+    width: $width-mobile;
+    margin: 0 auto;
+  }
+  .slider-text::before {
+    position: absolute;
+    top: -17px;
+    left: -22px;
+  }
+}
+@media screen and (min-width: $width-tablet) {
+  .customer-reviews {
+    width: 740px;
+    padding: 121px 0 119px 0;
+  }
+  .slider .slick-arrow {
+    position: absolute;
+    top: 280px;
+    z-index: 5;
+  }
+  .slick-prev {
+    display: block;
+    left: -40px;
+    font-size: 0;
+    background-image: url(../icons/slick-left.svg);
+    background-color: #fff;
+    opacity: 50%;
+    width: 60px;
+    height: 150px;
+    background-size: 60px 150px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .slick-next {
+    display: block;
+    opacity: 50%;
+    right: -40px;
+    font-size: 0;
+    background-image: url(../icons/slick-right.svg);
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 150px;
+    background-color: #fff;
+    background-size: 60px 150px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .slider {
+    width: 620px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .slider-text-wrapper {
+    padding: 47px 60px 27px;
+    margin-bottom: 42px;
+  }
+  .slider-text {
+    font-size: $text-size-secondary;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+    padding: 0 24px;
+  }
+  .slider-text::before {
+    position: absolute;
+    top: -15px;
+    left: -22px;
+  }
+  .slick-dots button {
+    margin-top: 0;
+    cursor: pointer;
+  }
+  .personal-data {
+    margin-bottom: 35px;
+  }
+  .slick-dots {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customer-reviews {
+    width: 1090px;
+    padding: 123px 0 132px 0;
+  }
+  .slider {
+    width: 926px;
+  }
+  .slider .slick-arrow {
+    top: 230px;
+  }
+  .slick-prev {
+    left: -80px;
+  }
+  .slick-next {
+    right: -80px;
+  }
+  .slider-text-wrapper {
+    margin-bottom: 15px;
+  }
+  .slider-text {
+    font-size: $text-size-tertiary;
+    line-height: 1.86;
+    padding: 0 4px;
+  }
+  .slider-text::before {
+    position: absolute;
+    top: -15px;
+    left: -31px;
+  }
+}
+
+.slider__item {
+  outline: none;
+}
+.slider .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+.slider .slick-dots li {
+  height: 12px;
+
+  text-align: center;
+  display: block;
+}
+.slider .slick-dots li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.slick-active button {
+  background-color: $card-dots-white;
+  background-image: url(../icons/home1.svg);
+  text-align: center;
+  align-items: center;
+  border-radius: 0;
+}

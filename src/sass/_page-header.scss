@@ -1,0 +1,318 @@
+// Точечные стили
+.container-header {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: $width-mobile) {
+    width: $width-mobile;
+  }
+
+  @media screen and (min-width: $width-tablet) {
+    width: $width-tablet;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @media screen and (min-width: $width-desktop) {
+    width: $width-desktop;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+}
+.no-underline {
+  text-decoration: none;
+}
+.no-list {
+  list-style: none;
+}
+.upcase {
+  text-transform: uppercase;
+}
+// Хедер
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  background-color: transparent;
+
+  z-index: 1;
+
+  @media screen and (min-width: $width-tablet) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+nav {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $width-to-desktop) {
+    justify-content: space-between;
+  }
+}
+// Лого
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+
+  //   background-color: $color-title-basic;
+  //   color: $color-bg-secondary;
+}
+// .icecream_logo {
+//   fill: currentColor;
+// }
+.logo-text {
+  color: $color-title-basic;
+
+  font-family: $font-family-title;
+  font-weight: 400;
+  font-size: 24px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: $width-desktop) {
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+}
+// Кнопки открытия/закрытия меню
+.menu-open,
+.menu-close {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  //   z-index: 1;
+}
+.menu-open {
+  color: $color-button-text;
+  opacity: 1;
+
+  transition: opacity $function-time $function-cubic,
+    color $function-time $function-cubic;
+
+  @media screen and (min-width: $width-desktop) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-bg-secondary;
+  }
+}
+.menu-open.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.icon-menu {
+  fill: currentColor;
+}
+.menu-close {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+
+  color: $color-bg-secondary;
+
+  transition: color $function-time $function-cubic;
+
+  @media screen and (min-width: $width-desktop) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-button-text;
+  }
+}
+.icon-close {
+  fill: currentColor;
+}
+// Блок меню
+.backdrop-menu {
+  width: 100%;
+
+  @media screen and (max-width: $width-to-desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    background-color: $bg-color-backdrop-menu;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity $function-time $function-cubic;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+@media screen and (max-width: $width-to-desktop) {
+  .menu-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $bg-color-menu-container;
+
+    transform: translateX(100%);
+
+    transition: transform $function-time $function-cubic;
+
+    .backdrop-menu.is-open & {
+      transform: translateX(0);
+    }
+  }
+}
+// Кнопка Купить сейчас
+.buy-button,
+.menu-container__buy-button {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  min-width: 192px;
+  min-height: 44px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 22px;
+  border: 1px solid transparent;
+  text-align: center;
+
+  cursor: pointer;
+
+  background-color: $color-bg-secondary;
+  color: $color-button-text;
+
+  font-family: $font-family-basic;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31em;
+
+  box-shadow: 0px 8px 30px $shadow-buy-button;
+
+  cursor: pointer;
+
+  transition: background-color $function-time $function-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-bg-medium;
+  }
+}
+.buy-button {
+  @media screen and (max-width: $width-to-tablet) {
+    display: none;
+  }
+  @media screen and (max-width: $width-to-desktop) {
+    margin-right: 30px;
+  }
+}
+.menu-container__buy-button {
+  width: calc(100% - 40px);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @media screen and (min-width: $width-desktop) {
+    display: none;
+  }
+}
+
+.buy-button__icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 15px;
+
+  fill: $color-button-text;
+}
+// Меню навигации - ссылки
+.site-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  @media screen and (min-width: $width-desktop) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.site-nav__item {
+  @media screen and (max-width: $width-to-desktop) {
+    border-top: 1px solid $border-color-site-nav;
+    border-bottom: 1px solid $border-color-site-nav;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $width-desktop) {
+      margin-right: 35px;
+    }
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  color: $color-button-bg-light;
+
+  font-family: $font-family-basic;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+
+  transition: color $function-time $function-cubic;
+
+  @media screen and (max-width: $width-to-desktop) {
+    padding-left: 20px;
+  }
+
+  @media screen and (min-width: $width-desktop) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-size: 16px;
+    line-height: 1.31;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-hover-link;
+  }
+}
